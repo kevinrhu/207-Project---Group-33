@@ -93,10 +93,6 @@ public class PlayerComparisonDataAccessObject implements PlayerComparisonAddData
         }
     }
 
-    public Player get(String username) {
-        return players.get(username);
-    }
-
     public boolean existsByName(String identifier) {                     //May not be needed
         return players.containsKey(identifier);
     }
