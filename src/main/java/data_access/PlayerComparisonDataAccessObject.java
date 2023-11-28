@@ -36,6 +36,12 @@ public class PlayerComparisonDataAccessObject implements
         headers.put("ab", 9);
         headers.put("obp", 10);
         headers.put("slg", 11);
+        headers.put("HR_rate", 12);
+        headers.put("CS_rate", 13);
+        headers.put("HBB_rate", 14);
+        headers.put("HH_rate", 15);
+        headers.put("OPS", 16);
+        headers.put("wOPS", 17);
 
 
         if (csvFile.length() == 0) {
@@ -83,7 +89,13 @@ public class PlayerComparisonDataAccessObject implements
                         player.getStats().get("sb"),
                         player.getStats().get("ab"),
                         player.getStats().get("obp"),
-                        player.getStats().get("slg")
+                        player.getStats().get("slg"),
+                        player.getStats().get("HR_rate"),
+                        player.getStats().get("CS_rate"),
+                        player.getStats().get("HBB_rate"),
+                        player.getStats().get("HH_rate"),
+                        player.getStats().get("OPS"),
+                        player.getStats().get("wOPS")
                 );
                 writer.write(line);
                 writer.newLine();
